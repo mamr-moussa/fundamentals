@@ -21437,12 +21437,13 @@ module.exports = __webpack_require__(12);
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
 __webpack_require__(2); //Front End Framework.
 __webpack_require__(8); //Front/JS/CSS Framework based on JS/CSS.
-Vue.component('codearea', __webpack_require__(45));
 window.Vue = __webpack_require__(2); //Front End Framework.
+Vue.component('codearea', __webpack_require__(45));
 window.App = new Vue({
 	el: '#app',
 	data: {}
@@ -34936,7 +34937,7 @@ exports = module.exports = __webpack_require__(15)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -35211,13 +35212,73 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 
   name: 'codearea',
 
   data: function data() {
-    return {};
+    return {
+      watchingMode: false,
+      code: '',
+      dataTypes: window.Maps.dataTypes
+
+    };
+  },
+
+  computed: {
+    linesNum: function linesNum() {
+      return this.lines.length;
+    },
+    lines: function lines() {
+      return this.code.split(/\r*\n/);
+    }
+  },
+  methods: {
+    toggleWatchingMode: function toggleWatchingMode() {
+      this.watchingMode = !this.watchingMode;
+    }
   }
 });
 
@@ -35229,9 +35290,146 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c("div", [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "ui icon buttons" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _vm._m(1),
+        _vm._v(" "),
+        _vm._m(2),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "ui button",
+            on: {
+              click: function($event) {
+                _vm.toggleWatchingMode()
+              }
+            }
+          },
+          [
+            _c("i", {
+              staticClass: "text_ms",
+              class: [
+                {
+                  "knocks-eye-blocked orange-text text-darken-3": !_vm.watchingMode
+                },
+                { "knocks-eye green-text": _vm.watchingMode }
+              ]
+            }),
+            _vm._v(" "),
+            !_vm.watchingMode
+              ? _c("span", { staticClass: "tinny_left_padding" }, [
+                  _vm._v("Watch")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.watchingMode
+              ? _c("span", { staticClass: "tinny_left_padding" }, [
+                  _vm._v("Watching ..")
+                ])
+              : _vm._e()
+          ]
+        )
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _vm.code.length > 0
+        ? _c(
+            "div",
+            {
+              staticClass: "col  border_radius_5 grey lighten-2",
+              staticStyle: { "padding-bottom": "1rem" }
+            },
+            [
+              _c("br"),
+              _vm._v(" "),
+              _vm._l(_vm.linesNum, function(line) {
+                return _c("div", { staticClass: "blue-text center" }, [
+                  _c("span", [_vm._v(_vm._s(line))]),
+                  _c("br")
+                ])
+              })
+            ],
+            2
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _c("div", { staticClass: "input-field col s10" }, [
+        _c("textarea", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.code,
+              expression: "code"
+            }
+          ],
+          staticClass: "materialize-textarea",
+          attrs: { id: "textarea1" },
+          domProps: { value: _vm.code },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.code = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _vm._m(3)
+      ])
+    ])
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("button", { staticClass: "ui button" }, [
+      _c("i", { staticClass: "play icon green-text text_ms" }),
+      _vm._v(" "),
+      _c("span", { staticClass: "tinny_left_padding" }, [_vm._v("Run")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("button", { staticClass: "ui button" }, [
+      _c("i", { staticClass: "stop icon red-text text_ms" }),
+      _vm._v(" "),
+      _c("span", { staticClass: "tinny_left_padding" }, [_vm._v("Stop")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("button", { staticClass: "ui button" }, [
+      _c("i", {
+        staticClass: "knocks-lab4 purple-text text-darken-3\ttext_ms"
+      }),
+      _vm._v(" "),
+      _c("span", { staticClass: "tinny_left_padding" }, [_vm._v("Analysis")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { attrs: { for: "textarea1" } }, [
+      _c("span", { staticClass: "knocks-code" }),
+      _vm._v(" "),
+      _c("span", [_vm._v("Code")])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

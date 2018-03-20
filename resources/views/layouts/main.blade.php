@@ -10,5 +10,6 @@
     	@yield('content')
     </div>
 </body>
+@yield('tail')
 <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
 </html>
