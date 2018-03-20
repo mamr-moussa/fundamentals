@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel = "stylesheet" href = "{{asset('css/app.css')}}"/>
-    <title></title>
-</head>
-<body>
-    <div id = "app"></div>
+@extends('layouts.main')
 
-</body>
-<script type="text/javascript" src="{{asset('js/app.js')}}"></script>
-</html>
+@section('externals')
+
+
+@endsection
+
+@section('content')
+
+
+@endsection
