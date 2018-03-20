@@ -5,6 +5,7 @@
 @import "~/css/knocks_glyphs/style.css"; //KNOCKS GLYPHS & ICONS PACKAGE
 @import "~semantic-ui/dist/semantic.min.css"; //SEMANTIC UI
 
+
 html , body , head , main {
 	font-family : monospace !important;
 }
@@ -23,3 +24,27 @@ html , body , head , main {
 .border_radius_5{;
 	border-radius : 5px;
 }
+
+
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    color : #b2ff59 ;
+    font-family : monospace ;
+    word-break : break-all;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  footer {
+  	 color : #b2ff59 ;
+    background-color : #212121;
+    //font-family : monospace ;
+    word-break : break-all;
+  }
+  #footer_list>li{
+  	margin-top : 3%;
+  }
