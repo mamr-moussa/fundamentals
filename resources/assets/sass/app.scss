@@ -4,3 +4,22 @@
 @import "~/css/animate.css"; //ANIMATE CSS
 @import "~/css/knocks_glyphs/style.css"; //KNOCKS GLYPHS & ICONS PACKAGE
 @import "~semantic-ui/dist/semantic.min.css"; //SEMANTIC UI
+
+html , body , head , main {
+	font-family : monospace !important;
+}
+.text_lg {
+	font-size : 270%;
+}
+.text_md {
+	font-size : 170%;
+}
+.text_ms {
+	font-size : 120%;
+}
+.tinny_left_padding{
+	padding-left : 0.2rem !important ;
+}
+.border_radius_5{;
+	border-radius : 5px
+}
