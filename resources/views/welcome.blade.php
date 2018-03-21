@@ -7,7 +7,10 @@
 
 @section('content')
 
-<codearea></codearea>
+<div class="row">
+    <br/>
+    <codearea></codearea>
+</div>
 
 @endsection
 
