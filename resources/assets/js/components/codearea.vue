@@ -11,8 +11,8 @@
 		<i class="stop icon red-text text_ms"></i>
 		<span class = "tinny_left_padding">Stop</span>
 		</button>
-		<button class="ui button">
-		<i class="knocks-lab4 purple-text text-darken-3	text_ms"></i>
+		<button class="ui button" @click = "analysisMode = !analysisMode" :disabled = "!runMode && !watchingMode">
+		<i class="knocks-lab  text-darken-3	text_ms" :class = "[{'purple-text' : analysisMode},{'lime-text'	 :!analysisMode}]"></i>
 		<span class = "tinny_left_padding">Analysis</span>
 		</button>
 		<button class="ui button" @click = "toggleWatchingMode()">
@@ -44,7 +44,7 @@
 	<p class = "red-text" v-if = "!hasStart">You didn't start your code correctly</p>
 	<p v-for = "err in declarationErrors" class = "red-text">{{err}}</p>
 	<p class = "green-text" v-if ="hasNoErrors">Your Program Was Succesfully Built!</p>
-	<table v-if = "!hasNoVariables && hasNoErrors">
+	<table v-if = "!hasNoVariables && hasNoErrors && analysisMode">
 		<tr v-for = "v in cashVariables">
 			<td>{{v.name}}</td>
 			<td>{{v.type}}</td>
@@ -68,7 +68,7 @@ export default {
     	tokens : window.Maps.tokens , 
     	cashVariables : {} , 
     	declarationErrors : [] , 
-
+    	analysisMode : false ,
     	runMode : false ,
 
     }

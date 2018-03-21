@@ -35241,7 +35241,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       tokens: window.Maps.tokens,
       cashVariables: {},
       declarationErrors: [],
-
+      analysisMode: false,
       runMode: false
 
     };
@@ -35348,7 +35348,31 @@ var render = function() {
           ]
         ),
         _vm._v(" "),
-        _vm._m(0),
+        _c(
+          "button",
+          {
+            staticClass: "ui button",
+            attrs: { disabled: !_vm.runMode && !_vm.watchingMode },
+            on: {
+              click: function($event) {
+                _vm.analysisMode = !_vm.analysisMode
+              }
+            }
+          },
+          [
+            _c("i", {
+              staticClass: "knocks-lab  text-darken-3\ttext_ms",
+              class: [
+                { "purple-text": _vm.analysisMode },
+                { "lime-text": !_vm.analysisMode }
+              ]
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "tinny_left_padding" }, [
+              _vm._v("Analysis")
+            ])
+          ]
+        ),
         _vm._v(" "),
         _c(
           "button",
@@ -35432,7 +35456,7 @@ var render = function() {
           }
         }),
         _vm._v(" "),
-        _vm._m(1)
+        _vm._m(0)
       ])
     ]),
     _vm._v(" "),
@@ -35457,7 +35481,7 @@ var render = function() {
                 ])
               : _vm._e(),
             _vm._v(" "),
-            !_vm.hasNoVariables && _vm.hasNoErrors
+            !_vm.hasNoVariables && _vm.hasNoErrors && _vm.analysisMode
               ? _c(
                   "table",
                   _vm._l(_vm.cashVariables, function(v) {
@@ -35478,18 +35502,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("button", { staticClass: "ui button" }, [
-      _c("i", {
-        staticClass: "knocks-lab4 purple-text text-darken-3\ttext_ms"
-      }),
-      _vm._v(" "),
-      _c("span", { staticClass: "tinny_left_padding" }, [_vm._v("Analysis")])
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
