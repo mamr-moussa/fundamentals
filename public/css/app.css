@@ -10240,3 +10240,32 @@ main {
   border-radius: 5px;
 }
 
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: monospace;
+  word-break: break-all;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+footer {
+  color: #b2ff59;
+  background-color: #212121;
+  word-break: break-all;
+}
+
+#footer_list > li {
+  margin-top: 3%;
+}
+
