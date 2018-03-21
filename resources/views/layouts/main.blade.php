@@ -2,7 +2,7 @@
 <html>
   <head>
     @yield('externals')
-    <title>Secugraphy</title>
+    <title>fundamentals</title>
     <link rel = "stylesheet" href = "{{ asset('css/app.css') }}"/>
     <title>CodeBaker</title>
      <link rel="shortcut icon" href="https://fund.dev/codebaker.ico"/>
@@ -31,29 +31,29 @@
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">
-          <a class="grey-text text-lighten-3" target = "_blank" href="https://github.com/mamr-moussa/secugraphy">
+          <a class="grey-text text-lighten-3" target = "_blank" href="https://github.com/mamr-moussa/fundamentals">
             <span class = "knocks-brand84"></span> Github Repository
           </a>
           </h5>
           <p style="font-family: sans-serif;">Workspace</p>
           <ul id = "footer_list">
             <li>
-              <a href ="https://github.com/mamr-moussa/secugraphy/blob/master/resources/assets/js/app.js" style="font-size: 120%; font-weight: 200;" class = "white-text" target="_blank">
+              <a href ="https://github.com/mamr-moussa/fundamentals/blob/master/resources/assets/js/app.js" style="font-size: 120%; font-weight: 200;" class = "white-text" target="_blank">
                 <span class = "knocks-brand119 knocks_icon"></span> <span style="font-family: sans-serif;">Script</span>
               </a>
             </li>
             <li>
-              <a href ="https://github.com/mamr-moussa/secugraphy/blob/master/public/js/map.js" style="font-size: 120%;font-weight: 200;" class = "white-text" target="_blank">
+              <a href ="https://github.com/mamr-moussa/fundamentals/blob/master/public/js/map.js" style="font-size: 120%;font-weight: 200;" class = "white-text" target="_blank">
                 <span class = "knocks-sitemap red-text knocks_icon"></span> <span style="font-family: sans-serif;">Characters Map</span>
               </a>
             </li>
                         <li>
-              <a href ="https://github.com/mamr-moussa/secugraphy/blob/master/resources/assets/sass/app.scss" style="font-size: 120%;font-weight: 200;" class = "white-text" target="_blank">
+              <a href ="https://github.com/mamr-moussa/fundamentals/blob/master/resources/assets/sass/app.scss" style="font-size: 120%;font-weight: 200;" class = "white-text" target="_blank">
                 <span class = "knocks-brand44 red-text knocks_icon"></span> <span style="font-family: sans-serif;">Stylesheets</span>
               </a>
             </li>
             <li>
-              <a href ="https://github.com/mamr-moussa/secugraphy/blob/master/resources/views/welcome.blade.php" style="font-size: 120%;font-weight: 200;" class = "white-text" target="_blank">
+              <a href ="https://github.com/mamr-moussa/fundamentals/blob/master/resources/views/welcome.blade.php" style="font-size: 120%;font-weight: 200;" class = "white-text" target="_blank">
                 <span class = "knocks-brand110 red-text knocks_icon"></span> <span style="font-family: sans-serif;">Templates</span>
               </a>
             </li>
